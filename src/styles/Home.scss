@@ -1,0 +1,205 @@
+@font-face {
+    font-family: Rejouice;
+    src: url(../assets/Rejouice-Headline.ttf);
+}
+
+@font-face {
+    font-family: NB;
+    src: url(../assets/NBInternationalProBoo.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-page {
+    font-family: NB;
+    color: #333;
+
+    .navbar {
+        width: 100%;
+        padding: 1vw 3vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(38, 30, 30, 0.381);
+        position: fixed;
+        top: 0;
+        z-index: 10;
+
+        h1 {
+            font-size: 2vw;
+            color: #fff;
+            font-family: Rejouice;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 4vw;
+
+            h4 {
+                cursor: pointer;
+                font-size: 1.1vw;
+                font-weight: 500;
+                color: #fff;
+                display: inline-block;
+                transition: color ease 0.6s;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -4px;
+                    height: 2px;
+                    width: 0;
+                    background-color: #adada2;
+                    transition: width 0.4s ease;
+                }
+
+                &:hover {
+                    color: #adada2;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        width: 100%;
+        height: 100vh;
+        background-image: url('/Hotel.jpg');
+        background-size: cover;
+        background-position: top 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        position: relative;
+
+        h1 {
+            font-size: 10vw;
+            text-align: center;
+            line-height: 10vw;
+            margin-bottom: 3vw;
+            font-family: Rejouice;
+        }
+
+        p {
+            width: 60%;
+            font-size: 1.5vw;
+            text-align: center;
+            margin-bottom: 2vw;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .text {
+                font-size: 1vw;
+                margin-bottom: 1vw;
+                letter-spacing: 1px;
+                opacity: 0.9;
+            }
+
+            .circle {
+                width: 3vw;
+                height: 3vw;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: bounce 2s infinite ease-in-out;
+
+                i {
+                    font-size: 18px;
+                    color: #fff;
+                }
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(12px);
+            }
+        }
+    }
+
+    .listings {
+        padding: 4vw 5vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        justify-content: center;
+        background-color: #FFF2EB;
+
+        .listing-card {
+            width: 300px;
+            height: 370px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .card-content {
+                padding: 1vw;
+                text-align: center;
+
+                h2 {
+                    font-size: 1.3vw;
+                    margin-bottom: 1vw;
+                }
+
+                p {
+                    font-size: 1vw;
+                    margin-bottom: 1vw;
+                }
+
+                a {
+                    background-color: #000;
+                    color: #fff;
+                    padding: 0.7vw;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    border: none;
+                    font-size: 0.9vw;
+                    width: 100%;
+
+                    &:hover {
+                        background-color: #182A34;
+                    }
+                }
+            }
+        }
+    }
+}

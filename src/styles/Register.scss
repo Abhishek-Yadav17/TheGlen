@@ -1,0 +1,129 @@
+@font-face {
+  font-family: Rejouice;
+  src: url(../assets/Rejouice-Headline.ttf);
+}
+
+@font-face {
+  font-family: NB;
+  src: url(../assets/NBInternationalProBoo.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30vw;
+  background-image: url(/Register.jpg);
+  background-size: cover;
+  background-position: top;
+  padding-left: 10%;
+  font-family: NB;
+
+  .register-form {
+    width: 380px;
+    height: 500px;
+    padding: 40px 30px;
+    background-color: rgba(255, 255, 255, 0.177);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      margin-bottom: 1.5vw;
+      font-size: 28px;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 2vw;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: transparent;
+      color: #fff;
+      transition: border 0.3s;
+
+      &:focus {
+        border-color: #000;
+        outline: none;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #182A34;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+
+    p {
+      margin-top: 1.2vw;
+      color: #fff;
+      font-size: 1vw;
+      text-align: center;
+      margin-bottom: 1.5vw;
+    }
+
+    .login-button {
+      width: 50%;
+      display: block;
+      margin: 1vw auto 0 auto;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+
+  .divider {
+    position: relative;
+    height: 100vh;
+    width: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      width: 2px;
+      background-color: #fff;
+    }
+
+    h1 {
+      color: 	#FFF;
+      font-size: 8vw;
+      font-weight: 700;
+      white-space: nowrap;
+      font-family: Rejouice;
+
+      span {
+        color: #781e1e;
+      }
+    }
+  }
+}
